@@ -1,12 +1,12 @@
 package com.enchanter.user
+import com.enchanter.user.CustomReactPackage
 
 import android.app.Application
 import android.content.res.Configuration
-
+import com.facebook.react.ReactPackage
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactNativeHost
-import com.facebook.react.ReactPackage
 import com.facebook.react.ReactHost
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.load
 import com.facebook.react.defaults.DefaultReactNativeHost
@@ -25,6 +25,7 @@ class MainApplication : Application(), ReactApplication {
             val packages = PackageList(this).packages
             // Packages that cannot be autolinked yet can be added manually here, for example:
             // packages.add(new MyReactNativePackage());
+            packages.add(CustomReactPackage());
             return packages
           }
 
